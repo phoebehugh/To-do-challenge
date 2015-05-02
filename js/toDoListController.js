@@ -1,16 +1,14 @@
-toDoList.controller('ToDoListController', [function() {
+toDoList.controller('ToDoListController', ['$resource', function($resource) {
   var self = this;
 
-  self.listDisplay = {
-    "tasks": [ 
-      {
-        "task": "Buy some chocolate"
-      }
-    ]
-  };
-
-  self.doList = function() {
-    
+  self.doAddTask = function() {
+    self.listDisplay = {
+      "tasks": [ 
+        {
+          "task": "Buy some chocolate"
+        }
+      ]
+    }
   };
 
 }]);

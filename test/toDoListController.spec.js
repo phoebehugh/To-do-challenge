@@ -19,7 +19,9 @@ describe('ToDoListController', function() {
       }
     ]; 
 
-    it('displays the task in the to-do list', function() {
+    it('displays the tasks in the to-do list', function() {
+      ctrl.newTask = 'Buy some chocolate';
+      ctrl.doAddTask();
       expect(ctrl.listDisplay.tasks).toEqual(tasks);
     });   
   });
