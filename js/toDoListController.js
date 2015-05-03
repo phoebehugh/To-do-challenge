@@ -1,8 +1,11 @@
-toDoList.controller('ToDoListController', ['$resource', function($resource) {
-  var self = this;
+toDoList.controller('ToDoListController', function($scope) {
 
-  self.doAddTask = function() {
-    self.listDisplay = {
+  $scope.listDisplay = [];
+
+    $scope.addTask = function() {
+      $scope.listDisplay.push({task : $scope.newTask, isComplete : false });
+    };      
+
       "tasks": [ 
         {
           "task": "Buy some chocolate"

@@ -13,14 +13,16 @@
   </head>
 
   <body ng-controller="ToDoListController as listCtrl">
+    <h1> Tasks to complete </h1>
     <div>
-      <form class="form-horizontal">
-        <input type="text" ng-model="listCtrl.newTask">
-        <button class="btn" ng-click="listCtrl.doAddTask()">Add Item</button>
+
+      <form id="toDoForm">
+        <input type="text" ng-model="listCtrl.newTask" name="newTask" placeholder="Please enter a task">
+        <button id="addTask" type="button" ng-click="addTask()">Add Item</button>
       </form>
 
-      <ul class="list-group" ng-repeat="tasks in listCtrl.listDisplay.tasks">
-        <li class="list-group-item">
+      <ul class="list-group">
+        <li class="list-group-item" ng-repeat="tasks in listCtrl.listDisplay.tasks">
         </li>
       </ul>
     </div>
